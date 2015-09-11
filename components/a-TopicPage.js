@@ -16,7 +16,7 @@ var {
 } = React;
 
 var TopicPage = React.createClass({
-  
+
   _renderSlidesContent(slides) {
      return slides.map((obj) => {
        return (
@@ -29,22 +29,21 @@ var TopicPage = React.createClass({
        )
      });
   },
-  
+
   getInitialState: function() {
     return {
-      
+
     };
   },
 
   render: function() {
     return (
       <ScrollableTabView
-        renderTabBar={() => <TopicTabBar
-          
-        />}
+        renderTabBar={() => <TopicTabBar />}
+        sceneContainerStyle={{ paddingBottom: 113 }}
        >
 
-       {this._renderSlidesContent(this.props.needSlideContents)}  
+       {this._renderSlidesContent(this.props.needSlideContents)}
       </ScrollableTabView>
     );
   },
@@ -52,7 +51,7 @@ var TopicPage = React.createClass({
 });
 
 var styles = StyleSheet.create({
-  
+
 });
 
 module.exports = TopicPage;
